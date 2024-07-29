@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class app{
+    public static void main (String[]args){
+     Scanner teclado = new Scanner(System.in);
+     int n1,c,d,u,r;
+     System.out.println("Insira o número (necessita ter 3 dígitos): ");
+     n1 = teclado.nextInt();
+     c = n1/100;
+     d = (n1/10)%10;
+     u = n1%10;
+     r = u*100 + d*10 + c*1;
+     System.out.println("Seu resultado é: " + r);
+
+             
+    }
+
+}

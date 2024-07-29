@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class app{
+    public static void main (String[]args){
+     Scanner teclado = new Scanner(System.in);
+        double D,d,r;
+    System.out.println("Insira o valor de D: ");
+     D = teclado.nextDouble();
+      System.out.println("Insira o valor de d: "); 
+     d = teclado.nextDouble();
+     r = (D*d)/2;
+     System.out.println("Seu resultado é: " + r);
+    }
+
+}

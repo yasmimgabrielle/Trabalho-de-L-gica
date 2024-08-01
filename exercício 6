@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class app{
+    public static void main (String[]args){
+     Scanner teclado = new Scanner(System.in);
+        int h,n,i,r;
+
+     System.out.println("Insira o valor da hora aula: ");
+     h = teclado.nextInt();
+     System.out.println("Insira o número de aulas dadas: ");
+     n = teclado.nextInt();
+     System.out.println("Insira percentual de desconto INSS: ");
+     i = teclado.nextInt();
+     
+     
+
+    
+    }
+}

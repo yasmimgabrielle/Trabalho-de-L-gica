@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class MinutosDesdeInicioDoDia {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite a hora no formato HH:MM: ");
+        String entrada = scanner.nextLine();
+        
+        String[] partes = entrada.split(":");
+        int horas = Integer.parseInt(partes[0]);
+        int minutos = Integer.parseInt(partes[1]);
+        
+        int minutosdia = horas * 60 + minutos;
+        
+        System.out.println("Se passaram: " + minutosdia + " minutos");
+    }
+}

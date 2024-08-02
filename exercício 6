@@ -36,6 +36,5 @@ public class app
         System.out.println("INSS descontado: R$ " + String.format("%.2f", inss));
         System.out.println("Salário Líquido: R$ " + String.format("%.2f", salarioLiquido));
         
-        teclado.close(); 
     }
 }

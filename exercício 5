@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class app {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor do primeiro termo: ");
+        double a1 = scanner.nextDouble();
+        
+        System.out.print("Digite a razão da PG: ");
+        double r = scanner.nextDouble();
+        
+        int n = 5;
+        
+        double a5 = a1 * Math.pow(r, n - 1);
+        
+        System.out.println("O 5º termo da Progressão Geométrica é: " + a5);
+        
+    }
+}
+

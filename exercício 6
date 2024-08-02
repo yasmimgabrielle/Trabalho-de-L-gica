@@ -1,19 +1,41 @@
 import java.util.Scanner;
 
-public class app{
-    public static void main (String[]args){
-     Scanner teclado = new Scanner(System.in);
-        int h,n,i,r;
+public class app
+{
+    public static void main(String[] args)
+    {
+        Scanner teclado = new Scanner(System.in);
+        double hora, num, inss, salarioBruto, salarioLiquido;
 
-     System.out.println("Insira o valor da hora aula: ");
-     h = teclado.nextInt();
-     System.out.println("Insira o número de aulas dadas: ");
-     n = teclado.nextInt();
-     System.out.println("Insira percentual de desconto INSS: ");
-     i = teclado.nextInt();
-     
-     
-
-    
+        System.out.println("Insira o valor da hora aula: ");
+        hora = teclado.nextDouble();
+        System.out.println("Insira o número de aulas dadas: ");
+        num = teclado.nextDouble();
+        
+        salarioBruto = hora * num;
+        
+        if (salarioBruto <= 1412.00) {
+            inss = salarioBruto * (7.5 / 100);
+        } 
+        else if (salarioBruto <= 2666.68) {
+            inss = salarioBruto * (9.0 / 100);
+        } 
+        else if (salarioBruto <= 4000.03) {
+            inss = salarioBruto * (12.0 / 100);
+        } 
+        else if (salarioBruto <= 7786.02) {
+            inss = salarioBruto * (14.0 / 100);
+        } 
+        else {
+            inss = salarioBruto * (14.0 / 100); 
+        }
+        
+        salarioLiquido = salarioBruto - inss;
+        
+        System.out.println("Salário Bruto: R$ " + String.format("%.2f", salarioBruto));
+        System.out.println("INSS descontado: R$ " + String.format("%.2f", inss));
+        System.out.println("Salário Líquido: R$ " + String.format("%.2f", salarioLiquido));
+        
+        teclado.close(); 
     }
 }
